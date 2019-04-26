@@ -1,30 +1,36 @@
 {
-	"name" : "sn01615/yunpian",
-	"description" : "云片短信",
-	"type" : "library",
-	"license" : "Apache-2.0",
-	"authors" : [{
-			"name" : "YangLong",
-			"email" : "168119405@qq.com"
-		}
-	],
-	"autoload" : {
-		"psr-4" : {
-			"Yunpian\\" : "src"
-		}
-	},
-	"support" : {
-		"source" : "https://github.com/sn01615/yunpian_lib",
-		"issues" : "https://github.com/sn01615/yunpian_lib/issues",
-		"email" : "168119405@qq.com"
-	},
-	"keywords" : [
-		"云片短信"
-	],
-	"repositories" : [{
-			"type" : "git",
-			"url" : "git@github.com:sn01615/yunpian_lib.git",
-			"name" : "GitHub"
-		}
-	]
+  "name": "sn01615/yunpian",
+  "description": "云片短信",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "YangLong",
+      "email": "168119405@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Yunpian\\": "src"
+    }
+  },
+  "support": {
+    "source": "https://github.com/sn01615/yunpian_lib",
+    "issues": "https://github.com/sn01615/yunpian_lib/issues",
+    "email": "168119405@qq.com"
+  },
+  "keywords": [
+    "云片短信"
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:sn01615/yunpian_lib.git",
+      "name": "GitHub"
+    }
+  ],
+  "require": {
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
 }

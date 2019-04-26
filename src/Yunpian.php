@@ -1,4 +1,5 @@
 <?php
+
 namespace Yunpian;
 
 /**
@@ -11,9 +12,9 @@ class Yunpian
 
     private $apikey, $opts = [];
 
-    public function setApiKey($apikey)
+    public function setApiKey($apiKey)
     {
-        $this->apikey = $apikey;
+        $this->apikey = $apiKey;
     }
 
     public function setCurlOpt(array $opts)
@@ -21,14 +22,17 @@ class Yunpian
         $this->opts = $opts;
     }
 
-    public function singleSend($mobile, $text)
+    public function singleSend($mobile, $text, $register = null)
     {
-        $data = array(
+        $data = [
             'text' => $text,
             'apikey' => $this->apikey,
-            'mobile' => $mobile
-        );
-        
+            'mobile' => $mobile,
+        ];
+        if ($register) {
+            $data['register'] = true;
+        }
+
         $url = 'https://sms.yunpian.com/v2/sms/single_send.json';
         return $this->doQuery($url, $data);
     }
