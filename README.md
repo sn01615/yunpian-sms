@@ -9,7 +9,7 @@ composer require sn01615/yunpian
 ### Usage
 
 ```php
-use Yunpian\Yumpian;
+use Yunpian\Yunpian;
 
 $text = "【某某有限公司】您的验证码是#code#";
 $text = str_replace('#code#', $code, $text);
